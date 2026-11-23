@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Exercício 10</title></head>
+<body>
+  <script>
+    function criarContador() {
+      let count = 0;
+
+      return {
+        incrementar: function() {
+          count++;
+          return count;
+        },
+        decrementar: function() {
+          count--;
+          return count;
+        },
+        valor: function() {
+          return count;
+        }
+      };
+    }
+
+    const contador = criarContador();
+    document.write("Incrementou: " + contador.incrementar() + "<br>"); 
+    document.write("Incrementou: " + contador.incrementar() + "<br>"); 
+    document.write("Decrementou: " + contador.decrementar() + "<br>"); 
+    document.write("Valor final: " + contador.valor());               
+  </script>
+</body>
+</html>

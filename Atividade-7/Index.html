@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Exercício 7</title></head>
+<body>
+  <input type="text" id="campoTarefa" placeholder="Digite uma tarefa">
+  <button id="btnAdicionar">Adicionar</button>
+  <ul id="listaTarefas"></ul>
+
+  <script>
+    let tarefas = [];
+    let campo = document.getElementById("campoTarefa");
+    let botao = document.getElementById("btnAdicionar");
+    let lista = document.getElementById("listaTarefas");
+
+    botao.addEventListener("click", function() {
+      let texto = campo.value.trim();
+      if (texto !== "") {
+        tarefas.push(texto);
+        
+        let item = document.createElement("li");
+        item.textContent = texto;
+        lista.appendChild(item);
+        
+        campo.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

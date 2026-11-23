@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Exercício 9</title></head>
+<body>
+  <script>
+    let notas = [5, 8, 6.5, 9, 7, 10, 4];
+
+    let aprovadas = notas.filter(nota => nota >= 7);
+    let notasComBonus = aprovadas.map(nota => nota + 1);
+
+    document.write("Notas aprovadas: " + aprovadas.join(", ") + "<br>");
+    document.write("Notas após somar 1 ponto: " + notasComBonus.join(", "));
+  </script>
+</body>
+</html>

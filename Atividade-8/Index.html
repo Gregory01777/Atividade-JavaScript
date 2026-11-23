@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Exercício 8</title></head>
+<body>
+  <button id="btnCor">Trocar Cor</button>
+
+  <script>
+    function gerarCorAleatoria() {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    document.getElementById("btnCor").addEventListener("click", function() {
+      document.body.style.backgroundColor = gerarCorAleatoria();
+    });
+  </script>
+</body>
+</html>
